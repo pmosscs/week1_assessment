@@ -11,9 +11,10 @@ const password = 'DevM0unta1nw33k1';
 //console.log(/[0-9]/.test(password));
 
 function checkPassword(pass) {
-    const letter = /[a-zA-Z]/.test(pass);
+    const lower = /[a-z]/.test(pass);
+    const upper = /[A-Z]/.test(pass);
     const num = /[0-9]/.test(pass);
-    if (pass.length >= 10 && letter === true && num === true) {
+    if (pass.length >= 10 && pass.length <= 20 && upper === true && lower === true && num === true) {
         console.log('Your password meets all requirements.');
     } else {
         console.log('Your password does not meet the requirements.');
