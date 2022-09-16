@@ -1,17 +1,23 @@
 const password = 'DevM0unta1nw33k1';
 
+//test passwords
 //DevM0unta1nw33k1
+//hello
+//1234567890
 
+//how to test for numbers and letters (MDN)
 //  /[]/.test();
-console.log(/[a-zA-Z]/.test(password));
-console.log(/[0-9]/.test(password));
+//console.log(/[a-zA-Z]/.test(password));
+//console.log(/[0-9]/.test(password));
 
 function checkPassword(pass) {
     const letter = /[a-zA-Z]/.test(pass);
     const num = /[0-9]/.test(pass);
-    if (num && letter) {
-        console.log('Testing one good');
+    if (pass.length >= 10 && letter === true && num === true) {
+        console.log('Your password meets all requirements.');
+    } else {
+        console.log('Your password does not meet the requirements.');
     }
 }
 
-console.log(checkPassword(password));
+checkPassword(password);
